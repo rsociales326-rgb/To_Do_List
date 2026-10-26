@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Business English Elementary - Teacher Verónica Hermida</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .font-handwriting {
+      font-family: 'Caveat', cursive;
+    }
+
+    .font-brand {
+      font-family: 'Outfit', sans-serif;
+    }
+
+    /* Sticky Note Aesthetic */
+    .sticky-note {
+      background: linear-gradient(135deg, #fff3a8 0%, #fef08a 60%, #fde047 100%);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.2), 0 8px 10px -6px rgba(0, 0, 0, 0.08), inset 0 -15px 30px -10px rgba(0,0,0,0.05);
+      border-bottom-right-radius: 2px 20px;
+    }
+
+    .sticky-note::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 110px;
+      height: 22px;
+      background: rgba(255, 255, 255, 0.45);
+      backdrop-filter: blur(2px);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+      border-radius: 2px;
+    }
+
+    /* Email Client Card */
+    .email-client {
+      background: #ffffff;
+      box-shadow: 0 15px 35px -10px rgba(0, 0, 0, 0.12), 0 0 0 1px rgba(0, 0, 0, 0.05);
+    }
+
+    .glass-header {
+      background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+    }
+
+    /* Answer Inputs */
+    .answer-input {
+      transition: all 0.2s ease-in-out;
+    }
+    
+    .answer-input:focus {
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.25);
+      border-color: #2563eb;
+    }
+
+    .answer-input.correct {
+      border-color: #16a34a !important;
+      background-color: #f0fdf4 !important;
+      color: #15803d !important;
+      box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.2) !important;
+    }
+
+    .answer-input.incorrect {
+      border-color: #dc2626 !important;
+      background-color: #fef2f2 !important;
+      color: #b91c1c !important;
+      box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2) !important;
+    }
+  </style>
+</head>
+<body class="bg-slate-100 min-h-screen text-slate-800 py-6 px-4 sm:px-6 lg:px-8 flex flex-col justify-between">
+
+  <!-- MAIN CONTAINER -->
+  <div class="max-w-5xl mx-auto w-full space-y-6">
+
+    <!-- PHOTOREALISTIC CORPORATE DESK HEADER BANNER -->
+    <header class="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200">
+      <!-- Background Image -->
+      <img 
+        src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1600&q=80" 
+        alt="Professional Corporate Office Desk Workspace" 
+        class="w-full h-48 sm:h-56 object-cover object-center"
+      />
+      <!-- Dark Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-900/75 to-slate-900/40 flex items-center p-6 sm:p-8">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between w-full gap-4">
+          
+          <div class="flex items-center gap-4">
+            <div class="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-tr from-blue-600 to-indigo-500 flex items-center justify-center text-white font-bold text-2xl shadow-xl ring-4 ring-white/20 shrink-0">
+              VH
+            </div>
+            <div>
+              <h1 class="text-2xl sm:text-3xl font-bold tracking-tight font-brand text-white drop-shadow-sm">
+                Teacher Verónica Hermida
+              </h1>
+              <div class="flex items-center gap-2 mt-1">
+                <span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-xs font-semibold bg-blue-500/30 text-blue-200 border border-blue-400/30 backdrop-blur-md">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+                  Business English - Elementary
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hidden md:block bg-white/10 backdrop-blur-md px-4 py-2.5 rounded-xl border border-white/15 text-right">
+            <p class="text-xs uppercase tracking-wider text-blue-200 font-bold">Grammar Focus</p>
+            <p class="text-sm font-semibold text-white">Present Perfect (Have / Haven't)</p>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- EXERCISE INSTRUCTION BANNER -->
+    <div class="bg-white rounded-xl p-5 shadow-sm border border-slate-200 flex items-start gap-4">
+      <div class="bg-blue-600 text-white font-bold text-lg rounded-lg w-9 h-9 flex items-center justify-center shrink-0 shadow-sm">
+        1
+      </div>
+      <div>
+        <h2 class="text-lg font-bold text-slate-900">Task Instructions</h2>
+        <p class="text-slate-700 text-sm sm:text-base mt-0.5 leading-relaxed">
+          Read the list of tasks then complete the email, saying what you <strong>have (<i class="fa-solid font-bold text-emerald-600 fa-check"></i>)</strong> and <strong>haven't (<i class="fa-solid font-bold text-rose-600 fa-xmark"></i>)</strong> done.
+        </p>
+      </div>
+    </div>
+
+    <!-- MAIN EXERCISE GRID -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      
+      <!-- LEFT COLUMN: STICKY NOTE TASK LIST -->
+      <div class="lg:col-span-5 flex justify-center">
+        <div class="sticky-note relative w-full max-w-md p-6 sm:p-8 rounded-sm transform lg:-rotate-1 transition-transform hover:rotate-0 duration-300">
+          
+          <div class="border-b-2 border-yellow-400/60 pb-2 mb-4 mt-2 flex justify-between items-center">
+            <h3 class="font-handwriting text-3xl font-bold text-amber-950 tracking-wide">
+              To-Do List
+            </h3>
+            <span class="text-[11px] font-bold uppercase tracking-wider text-amber-800 bg-yellow-300/70 px-2 py-0.5 rounded">
+              Office Tasks
+            </span>
+          </div>
+
+          <ul class="space-y-3 font-handwriting text-2xl text-slate-900 font-semibold leading-snug">
+            <li class="flex items-start justify-between gap-2 border-b border-yellow-300/40 pb-1.5">
+              <span>Finish the report for Ajax.</span>
+              <span class="text-emerald-700 font-bold text-2xl shrink-0">✓</span>
+            </li>
+            <li class="flex items-start justify-between gap-2 border-b border-yellow-300/40 pb-1.5">
+              <span>Call our suppliers.</span>
+              <span class="text-rose-600 font-bold text-2xl shrink-0">✗</span>
+            </li>
+            <li class="flex items-start justify-between gap-2 border-b border-yellow-300/40 pb-1.5">
+              <span>Finalize the menu for the buffet reception.</span>
+              <span class="text-emerald-700 font-bold text-2xl shrink-0">✓</span>
+            </li>
+            <li class="flex items-start justify-between gap-2 border-b border-yellow-300/40 pb-1.5">
+              <span>Book hotel rooms for our Thai guests.</span>
+              <span class="text-emerald-700 font-bold text-2xl shrink-0">✓</span>
+            </li>
+            <li class="flex items-start justify-between gap-2 border-b border-yellow-300/40 pb-1.5">
+              <span>Send the timetable of the visit to the guests.</span>
+              <span class="text-rose-600 font-bold text-2xl shrink-0">✗</span>
+            </li>
+            <li class="flex items-start justify-between gap-2 border-b border-yellow-300/40 pb-1.5">
+              <span>Check Irena's emails.</span>
+              <span class="text-emerald-700 font-bold text-2xl shrink-0">✓</span>
+            </li>
+            <li class="flex items-start justify-between gap-2">
+              <span>Cancel Irena's flight to Sweden.</span>
+              <span class="text-rose-600 font-bold text-2xl shrink-0">✗</span>
+            </li>
+          </ul>
+
+        </div>
+      </div>
+
+      <!-- RIGHT COLUMN: EMAIL CLIENT INTERFACE -->
+      <div class="lg:col-span-7">
+        <div class="email-client rounded-2xl overflow-hidden border border-slate-200">
+          
+          <!-- EMAIL TOOLBAR -->
+          <div class="glass-header px-4 py-3 border-b border-slate-200 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+              <span class="w-3.5 h-3.5 rounded-full bg-rose-500 inline-block"></span>
+              <span class="w-3.5 h-3.5 rounded-full bg-amber-500 inline-block"></span>
+              <span class="w-3.5 h-3.5 rounded-full bg-emerald-500 inline-block"></span>
+              <span class="ml-2 text-xs font-semibold text-slate-500 flex items-center gap-1.5">
+                <i class="fa-regular fa-envelope text-slate-400"></i> New Email
+              </span>
+            </div>
+            <div class="text-slate-400 text-xs font-medium">
+              Inbox / Sent
+            </div>
+          </div>
+
+          <!-- EMAIL HEADER FIELDS -->
+          <div class="px-6 py-3 border-b border-slate-200/80 bg-slate-50/70 text-sm text-slate-600 space-y-1">
+            <div class="flex items-center gap-2">
+              <span class="font-semibold text-slate-400 w-12">To:</span>
+              <span class="text-slate-800 font-medium">Irena &lt;irena@company.com&gt;</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="font-semibold text-slate-400 w-12">Subject:</span>
+              <span class="text-slate-800 font-medium">Task Updates</span>
+            </div>
+          </div>
+
+          <!-- EMAIL CONTENT -->
+          <div class="p-6 sm:p-8 space-y-5 text-slate-800 text-base leading-relaxed">
+            <p class="font-semibold text-slate-900">Dear Irena,</p>
+
+            <p class="text-slate-700">
+              I have been very busy, so I haven't done everything you asked.
+            </p>
+
+            <!-- FILL-IN-THE-BLANK FORM (Completely blank by default) -->
+            <ul class="space-y-4 pl-1">
+              
+              <!-- Blank 1 -->
+              <li class="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span>I</span>
+                <div class="relative inline-block">
+                  <input type="text" id="q1" 
+                    class="answer-input w-44 px-3 py-1 bg-white border-2 border-slate-300 rounded-lg text-slate-900 font-medium text-sm shadow-sm"
+                    value="" autocomplete="off" spellcheck="false" aria-label="Input field 1">
+                  <span id="feedback-q1" class="hidden absolute -right-7 top-1 text-lg"></span>
+                </div>
+                <span>the report for Ajax.</span>
+              </li>
+
+              <!-- Blank 2 -->
+              <li class="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span>I</span>
+                <div class="relative inline-block">
+                  <input type="text" id="q2" 
+                    class="answer-input w-44 px-3 py-1 bg-white border-2 border-slate-300 rounded-lg text-slate-900 font-medium text-sm shadow-sm"
+                    value="" autocomplete="off" spellcheck="false" aria-label="Input field 2">
+                  <span id="feedback-q2" class="hidden absolute -right-7 top-1 text-lg"></span>
+                </div>
+                <span>our suppliers.</span>
+              </li>
+
+              <!-- Blank 3 -->
+              <li class="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span>I</span>
+                <div class="relative inline-block">
+                  <input type="text" id="q3" 
+                    class="answer-input w-44 px-3 py-1 bg-white border-2 border-slate-300 rounded-lg text-slate-900 font-medium text-sm shadow-sm"
+                    value="" autocomplete="off" spellcheck="false" aria-label="Input field 3">
+                  <span id="feedback-q3" class="hidden absolute -right-7 top-1 text-lg"></span>
+                </div>
+                <span>the menu for the buffet reception.</span>
+              </li>
+
+              <!-- Blank 4 -->
+              <li class="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span>I</span>
+                <div class="relative inline-block">
+                  <input type="text" id="q4" 
+                    class="answer-input w-44 px-3 py-1 bg-white border-2 border-slate-300 rounded-lg text-slate-900 font-medium text-sm shadow-sm"
+                    value="" autocomplete="off" spellcheck="false" aria-label="Input field 4">
+                  <span id="feedback-q4" class="hidden absolute -right-7 top-1 text-lg"></span>
+                </div>
+                <span>hotel rooms for our Thai guests.</span>
+              </li>
+
+              <!-- Blank 5 -->
+              <li class="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span>I</span>
+                <div class="relative inline-block">
+                  <input type="text" id="q5" 
+                    class="answer-input w-44 px-3 py-1 bg-white border-2 border-slate-300 rounded-lg text-slate-900 font-medium text-sm shadow-sm"
+                    value="" autocomplete="off" spellcheck="false" aria-label="Input field 5">
+                  <span id="feedback-q5" class="hidden absolute -right-7 top-1 text-lg"></span>
+                </div>
+                <span>the timetable of the visit to the guests.</span>
+              </li>
+
+              <!-- Blank 6 -->
+              <li class="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span>I</span>
+                <div class="relative inline-block">
+                  <input type="text" id="q6" 
+                    class="answer-input w-44 px-3 py-1 bg-white border-2 border-slate-300 rounded-lg text-slate-900 font-medium text-sm shadow-sm"
+                    value="" autocomplete="off" spellcheck="false" aria-label="Input field 6">
+                  <span id="feedback-q6" class="hidden absolute -right-7 top-1 text-lg"></span>
+                </div>
+                <span>your emails.</span>
+              </li>
+
+              <!-- Blank 7 -->
+              <li class="flex flex-wrap items-center gap-x-2 gap-y-1.5">
+                <span class="text-slate-400 font-bold">•</span>
+                <span>I</span>
+                <div class="relative inline-block">
+                  <input type="text" id="q7" 
+                    class="answer-input w-44 px-3 py-1 bg-white border-2 border-slate-300 rounded-lg text-slate-900 font-medium text-sm shadow-sm"
+                    value="" autocomplete="off" spellcheck="false" aria-label="Input field 7">
+                  <span id="feedback-q7" class="hidden absolute -right-7 top-1 text-lg"></span>
+                </div>
+                <span>your flight to Sweden.</span>
+              </li>
+
+            </ul>
+
+            <p class="pt-2 font-semibold text-slate-800">
+              Regards,
+            </p>
+
+          </div>
+
+          <!-- CONTROLS & FEEDBACK BAR -->
+          <div class="p-5 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+            
+            <div class="flex items-center gap-3 w-full sm:w-auto">
+              <button onclick="checkAnswers()" class="w-full sm:w-auto px-6 py-2.5 bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-semibold rounded-xl shadow-md transition-all flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane text-xs"></i> Check Answers
+              </button>
+              
+              <button onclick="resetExercise()" class="px-4 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-700 active:scale-95 font-semibold rounded-xl transition-all flex items-center justify-center gap-2 text-sm">
+                <i class="fa-solid fa-rotate-right"></i> Reset
+              </button>
+            </div>
+
+            <!-- SCORE CARD DISPLAY -->
+            <div id="score-box" class="hidden text-sm font-bold px-4 py-2 rounded-xl bg-white border border-slate-200 shadow-sm text-center w-full sm:w-auto">
+              <span id="score-text" class="text-slate-800">Score: 0 / 7</span>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ENGLISH FOOTER / ATTRIBUTION -->
+    <footer class="mt-8 text-center text-slate-500 text-xs sm:text-sm font-medium py-3 px-6 rounded-xl border border-slate-200 bg-white/60">
+      Adapted from <span class="text-slate-700 font-semibold">Oxford Business Result</span> • Business English Elementary
+    </footer>
+
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script>
+    // Answer Key
+    const ANSWER_KEY = {
+      q1: ["have finished", "'ve finished", "ve finished"],
+      q2: ["haven't called", "have not called"],
+      q3: ["have finalized", "'ve finalized", "ve finalized", "have finalised", "'ve finalised", "ve finalised"],
+      q4: ["have booked", "'ve booked", "ve booked"],
+      q5: ["haven't sent", "have not sent"],
+      q6: ["have checked", "'ve checked", "ve checked"],
+      q7: ["haven't canceled", "haven't cancelled", "have not canceled", "have not cancelled"]
+    };
+
+    // Standardize user input strings
+    function normalizeText(str) {
+      return str
+        .toLowerCase()
+        .trim()
+        .replace(/’/g, "'")  // Standardize apostrophes
+        .replace(/\s+/g, ' '); // Normalize spaces
+    }
+
+    function checkAnswers() {
+      let score = 0;
+      const total = 7;
+
+      for (let i = 1; i <= total; i++) {
+        const inputId = `q${i}`;
+        const input = document.getElementById(inputId);
+        const feedback = document.getElementById(`feedback-${inputId}`);
+        const validAnswers = ANSWER_KEY[inputId];
+        
+        const userVal = normalizeText(input.value);
+
+        // Check if user answer matches any valid answer variation
+        const isCorrect = validAnswers.some(ans => normalizeText(ans) === userVal);
+
+        input.classList.remove('correct', 'incorrect');
+        feedback.classList.remove('hidden');
+
+        if (userVal === "") {
+          input.classList.add('incorrect');
+          feedback.innerHTML = '<i class="fa-solid fa-circle-exclamation text-amber-500" title="Empty Field"></i>';
+        } else if (isCorrect) {
+          input.classList.add('correct');
+          feedback.innerHTML = '<i class="fa-solid fa-circle-check text-emerald-600" title="Correct"></i>';
+          score++;
+        } else {
+          input.classList.add('incorrect');
+          feedback.innerHTML = '<i class="fa-solid fa-circle-xmark text-rose-600" title="Incorrect"></i>';
+        }
+      }
+
+      // Show final score
+      const scoreBox = document.getElementById('score-box');
+      const scoreText = document.getElementById('score-text');
+      scoreBox.classList.remove('hidden');
+
+      if (score === total) {
+        scoreText.className = "text-emerald-600 font-extrabold";
+        scoreText.innerHTML = `🎉 Perfect! Score: ${score} / ${total}`;
+      } else if (score >= 5) {
+        scoreText.className = "text-blue-600 font-bold";
+        scoreText.innerHTML = `Great job! Score: ${score} / ${total}`;
+      } else {
+        scoreText.className = "text-rose-600 font-bold";
+        scoreText.innerHTML = `Score: ${score} / ${total} — Try again!`;
+      }
+    }
+
+    function resetExercise() {
+      for (let i = 1; i <= 7; i++) {
+        const input = document.getElementById(`q${i}`);
+        const feedback = document.getElementById(`feedback-q${i}`);
+        
+        input.value = '';
+        input.classList.remove('correct', 'incorrect');
+        feedback.classList.add('hidden');
+      }
+
+      const scoreBox = document.getElementById('score-box');
+      scoreBox.classList.add('hidden');
+    }
+
+    // Submit on Enter keypress inside any input field
+    document.querySelectorAll('.answer-input').forEach(input => {
+      input.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          checkAnswers();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
